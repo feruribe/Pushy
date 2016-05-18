@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.indatcom.pushy"
+        minSdkVersion 8
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    // AppCompat v7 Dependency
+    compile 'com.android.support:appcompat-v7:22.1.0'
+    // All .jar files in ./libs
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
