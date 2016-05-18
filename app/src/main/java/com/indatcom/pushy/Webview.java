@@ -3,6 +3,7 @@ package com.indatcom.pushy;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -34,6 +35,7 @@ public class Webview extends ActionBarActivity {
                 web = (WebView)findViewById(R.id.webView);
                 txtView.setText("Ruta de la notificacion"+msg);
                 web.loadUrl(msg);
+                Log.e("Ruta", msg);
             }
         }
     }
